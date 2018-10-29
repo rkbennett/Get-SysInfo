@@ -1,12 +1,10 @@
-﻿#Requires -Version 2.0
-
 <#
   .SYNOPSIS
   Converts systeminfo.exe output to powershell object
   .DESCRIPTION
   Levereges a large amount of string parsing to split a few of the specific fields into hashtables and arrays (IPs, HyperV Requirements, etc.)
   .EXAMPLE
-  Simply call function and save results to variable for maximum interaction ( $sysinfo=Get-SysInfo ) and then access various child objects as desired ( $sysinfo.networkcards[0].ipaddresses  to returns available IPs from second profile/interface)  
+  Simply call function and save results to variable for maximum interaction ( $sysinfo=Get-SysInfo ) and then access various child objects as desired ( $sysinfo.networkcards[0].ipaddresses  to returns available IPs from first profile/interface)  
 #>
 
 function Get-SysInfo{
